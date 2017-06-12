@@ -1,0 +1,18 @@
+## A New Post
+
+Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+ 
+ autoid: ringeklokke
+  alias: "Ringeklokke"
+  trigger:
+   - platform: event
+     event_type: button_pressed
+     event_data: {'state': 'group on', 'entity_id': 'switch.ringeklokke'}
+   condition:
+   - conditions: and
+       condition: time
+       after: 07:30
+       condition: time
+       before: 19:30
+   action:
+   #fyll inn MP3 avspilling
